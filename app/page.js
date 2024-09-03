@@ -101,13 +101,13 @@ export default function Home() {
           />
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl text-cusred mb-4 font-bold">
-          I'm <span className="font-dancing-script text-cusgreen">John Wesley</span>
+          I&apos;m <span className="font-dancing-script text-cusgreen">John Wesley</span>
         </h1>
         <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-inter">
           A Software Engineer based in India
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-fuchsia-400 mt-4">
-          “An honest, optimistic, unfiltered, and creative developer, full of ideas and facts."
+        &quot;An honest, optimistic, unfiltered, and creative developer, full of ideas and facts.&quot;
         </p>
         <div className="mt-6 flex justify-center gap-4">
           <motion.button

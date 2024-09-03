@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 
 import { motion } from "framer-motion";
@@ -23,9 +24,12 @@ const ProjectCard = ({ project, delay }) => {
         }}
       >
         <div className="absolute w-full h-full bg-cusred text-white p-1 [backface-visibility:hidden] rounded-lg">
-          <img
+          <Image
             src={project.image}
             alt={project.title}
+            width={100}
+            height={100}
+            unoptimized={true}
             className="w-full h-full object-cover rounded-lg"
           />
           <h3 className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 rounded-b-lg">
