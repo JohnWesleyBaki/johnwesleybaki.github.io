@@ -23,11 +23,6 @@ function Page() {
     setResponseMessage("");
 
     try {
-      console.log(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      );
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
@@ -36,7 +31,6 @@ function Page() {
       );
       setResponseMessage("Message sent successfully!");
     } catch (error) {
-      console.error(error);
       setResponseMessage("Error sending message. Please try again.");
     } finally {
       setLoading(false);
