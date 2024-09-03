@@ -1,4 +1,3 @@
-// components/NavBar.jsx
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -30,7 +29,7 @@ const NavBar = () => {
 
   return (
     <nav className="flex justify-between items-center p-4 bg-transparent">
-      <div className="lg:hidden">
+      <div className="lg:hidden top-8 right-2 absolute">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <svg
             className="w-8 h-8"

@@ -1,4 +1,3 @@
-// pages/about.js
 "use client";
 import { useState } from "react";
 import Skills from "../components/Skills";
@@ -17,14 +16,14 @@ const TabLayout = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <div className="flex flex-col md:flex-row h-full w-full">
+    <div className="flex flex-col md:flex-row h-full w-full justify-center items-center">
       {/* Sidebar with vertical tabs */}
-      <div className="w-full md:w-1/4 p-4 border-b md:border-b-0 md:border-r border-gray-300">
+      <div className="w-40 md:w-1/4 p-4 border-b md:border-b-0 md:border-r border-gray-300 ski">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`block w-full text-left px-4 py-2 mb-2 rounded ${
+            className={`block w-40 text-left px-4 py-2 mb-2 rounded  ${
               activeTab === tab.id
                 ? "bg-cusgreen text-black"
                 : "bg-cusred text-white"
@@ -45,14 +44,14 @@ const TabLayout = () => {
 
 export default function About() {
   return (
-    <div className="h-screen w-full m-1 bg-black text-red-300 flex flex-col items-center justify-center relative">
+    <div className="h-screen w-full  bg-black text-red-300 flex flex-col items-center justify-center relative">
       <div className="blob w-64 h-64 rounded-full top-0 absolute right-0"></div>
       <div className="text-center flex flex-col items-center p-4">
-        <h1 className="text-3xl md:text-4xl sm:text-2xl text-cusred font-bold mt-1 md:pd-6 mb-2 md:mb-6">
+        <h1 className="text-lg sm:text-2xl md:text-4xl  text-cusred font-bold mt-1  mb-1 md:mb-8 md:mt-4 ">
           About Me
         </h1>
         <div className="flex justify-center w-full p-4">
-          <p className="max-w-full sm:max-w-2xl md:max-w-3xl text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="text-sm sm:text-xs mt-2 md:text-base lg:text-lg xl:text-xl leading-relaxed max-w-full sm:max-w-2xl md:max-w-3xl">
             I express my ideas and views without any hesitation or bias. I want
             to be in a place where my opinions are valued or at least
             considered, criticized but not ignored. Technology is the one tool

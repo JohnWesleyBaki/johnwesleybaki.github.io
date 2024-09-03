@@ -35,7 +35,7 @@ function Skills() {
   return (
     <div className="h-80 scrollable-container p-4">
       <motion.div
-        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
@@ -52,7 +52,7 @@ function Skills() {
               alt={skill.title}
               width={60}
               height={60}
-              className="mb-2"
+              className="mb-2 w-10 h-10"
             />
             <span className="text-center text-sm font-medium text-cusgreen">
               {skill.title}

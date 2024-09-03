@@ -18,8 +18,8 @@ function Education() {
       animate="visible"
       className="flex gap-2 flex-col"
     >
-      <div className="bg-blue-400 h-[7rem] rounded-md text-black">
-        <h1 className="text-2xl font-bold">
+      <div className="bg-blue-400 h-[7rem] rounded-md text-black ">
+        <h1 className="text-lg sm:text-xl  font-bold">
           Gayatri Vidya Parishad College of Engineering
         </h1>
         <h2 className="font-semibold">
@@ -28,7 +28,9 @@ function Education() {
       </div>
 
       <div className="bg-blue-400 h-[7rem] rounded-md text-black">
-        <h1 className="text-2xl font-bold">Narayana Junior College</h1>
+        <h1 className="text-lg sm:text-xl  font-bold">
+          Narayana Junior College
+        </h1>
         <h2 className="font-semibold">
           Intermediate(High School) || 2016-2018
         </h2>

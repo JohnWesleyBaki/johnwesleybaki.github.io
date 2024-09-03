@@ -21,13 +21,13 @@ function Tools() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
   return (
-    <div className="h-80  ">
+    <div className="h-80  scrollable-container">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
         variants={parentVariants}
-        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        className="grid grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-5"
       >
         {tools.map((tool) => (
           <motion.div
@@ -38,9 +38,9 @@ function Tools() {
             <Image
               src={tool.svgpath}
               alt={tool.title}
-              width={60} // Adjust width as needed
-              height={60} // Adjust height as needed
-              className="mb-2"
+              width={60}
+              height={60}
+              className="mb-2 w-10 h-10"
             />
             <span className="text-center text-sm font-medium text-cusgreen">
               {tool.title}

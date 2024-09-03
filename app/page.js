@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState,} from "react";
 import Image from 'next/image'
 import { motion, AnimatePresence } from "framer-motion";
 import Projects from "./projects/page";
 import Contact from "./contact/page";
 import About from "./about/page"
+import LoadingScreen from "./loading";
 
 
 
@@ -14,8 +15,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [showLanding, setShowLanding] = useState(false);
 
-  const AboutRef = useRef(null);
-  const ContactRef = useRef(null);
+
 
   const createTile = (index) => (
     <div key={index} className="tile" />
@@ -23,7 +23,7 @@ export default function Home() {
 
   const createTiles = (quantity) => {
     return Array.from({ length: quantity }, (_, i) => createTile(i));
-  };
+  }
 
   const createGrid = () => {
     const size = window.innerWidth > 800 ? 100 : 50;
@@ -47,41 +47,24 @@ export default function Home() {
   }, []);
 
 
- const ScrollToAbout = ()=>{
-// if(AboutRef.current){
-//   AboutRef.current.scrollIntoView({behaviour:"smooth",})
-// }
-window.scrollTo({
-  top: 770, 
-  behavior: 'smooth',
-});
- }
 
- const ScrollToContact =()=>{
-  // if(ContactRef.current){
-  //   ContactRef.current.scrollIntoView({behaviour:"smooth",})
-  // }
-
-  window.scrollTo({
-    top: 2400, 
-    behavior: 'smooth',
-  });
- }
+ const scrollToSection = (id) => {
+ 
+  setTimeout(() => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, 300);
+};
 
   return (
     <div>
       
       <AnimatePresence>
         {loading && (
-          <motion.div
-            className="loading-screen"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <h1 className="text-7xl text-blue-50">Loading..</h1>
-          </motion.div>
+          <LoadingScreen/>
+        
         )}
       </AnimatePresence>
 
@@ -94,7 +77,7 @@ window.scrollTo({
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}
-           transition={{ duration: 1 }}
+           transition={{ duration:1,}}
            className="absolute top-0 left-0 w-full h-full grid grid-cols-[var(--columns)] grid-rows-[var(--rows)] z-0"
          >
            {createTiles(columns * rows)}
@@ -131,7 +114,7 @@ window.scrollTo({
             whileHover={{ scale: 0.9 }}
             whileTap={{ scale: 0.8 }}
             className="text-white bg-cusred rounded-md py-2 px-4 text-lg md:text-xl"
-            onClick={ScrollToAbout}
+            onClick={() => scrollToSection("about")}
           >
             About Me
           </motion.button>
@@ -139,7 +122,7 @@ window.scrollTo({
             whileHover={{ scale: 0.9 }}
             whileTap={{ scale: 0.8 }}
             className="text-white bg-cusred rounded-md py-2 px-4 text-lg md:text-xl"
-            onClick={ScrollToContact}
+            onClick={() => scrollToSection("contact")}
           >
             Contact Me
           </motion.button>
@@ -160,13 +143,13 @@ window.scrollTo({
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <div ref={AboutRef} id="about">
+            <div  id="about">
              <About/>
             </div>
             <div id="projects">
               <Projects />
             </div>
-            <div ref={ContactRef} id="contact">
+            <div  id="contact">
               <Contact />
             </div>
           </motion.div>
@@ -175,3 +158,4 @@ window.scrollTo({
     </div>
   );
 }
+

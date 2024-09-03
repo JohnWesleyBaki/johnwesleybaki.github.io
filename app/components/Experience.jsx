@@ -19,8 +19,10 @@ function Experience() {
         animate="visible"
         className="bg-blue-400  rounded-md text-black "
       >
-        <h1 className="text-2xl font-bold">Harman Connected Services</h1>
-        <h2 className="text-lg font-semibold mt-1">
+        <h1 className="text-lg sm:text-xl font-bold">
+          Harman Connected Services
+        </h1>
+        <h2 className="text-base sm:text-lg  font-semibold mt-1">
           Software Engineer || April 2022 — August 2023
         </h2>
         <ul className="ml-1 text-sm">

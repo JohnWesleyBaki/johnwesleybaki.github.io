@@ -33,7 +33,7 @@ const ProjectCard = ({ project, delay }) => {
           </h3>
         </div>
         <div className="absolute w-full h-full bg-cusgreen text-black p-4 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-lg">
-          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+          <h3 className="text-lg sm:text-xl font-bold mb-2">{project.title}</h3>
           <p className="text-sm mb-2">{project.description}</p>
           <p className="text-sm mb-2">
             <strong>Tech Stack:</strong> {project.techStack.join(", ")}
@@ -130,7 +130,7 @@ function Page() {
     <div className="h-screen w-full m-1 bg-black text-red-300 relative scrollable-cont">
       <div className="blob w-64 h-64 rounded-full absolute "></div>
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-cusred mb-8 mt-8">
+        <h1 className="text-lg sm:text-2xl md:text-4xl font-bold text-cusred mb-8 mt-8">
           My Projects
         </h1>
       </div>

@@ -48,9 +48,13 @@ function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.5 }}
         >
-          <h1 className="text-4xl font-bold text-cusred mb-8 ">Contact Me</h1>
+          <div className="text-center">
+            <h1 className="text-lg sm:text-2xl md:text-4xl  font-bold text-cusred mb-4 ">
+              Contact Me
+            </h1>
+          </div>
 
-          <p className="leading-relaxed  mb-3">
+          <p className="leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl mb-3">
             If i convinced you to consider me then i think we can meet over a
             zoom call and start discussing 🤞
           </p>
@@ -128,7 +132,7 @@ function Page() {
             >
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-900 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-cusred focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 disabled={loading}
               >
                 {loading ? "Sending..." : "Send Message"}
