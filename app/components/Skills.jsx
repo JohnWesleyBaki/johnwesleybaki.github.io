@@ -11,7 +11,7 @@ function Skills() {
     { id: "css", svgpath: "/svgs/css.svg", title: "CSS" },
     { id: "javascript", svgpath: "/svgs/js.svg", title: "JavaScript" },
     { id: "python", svgpath: "/svgs/python.svg", title: "Python" },
-    { id: "r", svgpath: "/svgs/r.svg", title: "R" },
+    { id: "r", svgpath: "/svgs/R.svg", title: "R" },
     { id: "react", svgpath: "/svgs/react.svg", title: "React" },
     { id: "nodejs", svgpath: "/svgs/nodejs.svg", title: "Node.js" },
     { id: "express", svgpath: "/svgs/express.svg", title: "Express JS" },

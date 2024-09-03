@@ -23,6 +23,11 @@ function Page() {
     setResponseMessage("");
 
     try {
+      console.log(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      );
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
