@@ -78,7 +78,7 @@ export default function Home() {
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}
            transition={{ duration:1,}}
-           className="absolute top-0 left-0 w-full h-full grid grid-cols-[var(--columns)] grid-rows-[var(--rows)] z-0"
+           className="absolute top-0 left-0 w-full h-full grid grid-cols-[var(--columns)] grid-rows-[var(--rows)] z-0 "
          >
            {createTiles(columns * rows)}
          </motion.div>
