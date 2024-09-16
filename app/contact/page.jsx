@@ -40,7 +40,7 @@ function Page() {
 
   return (
     <div className="h-screen w-full m-1 bg-black text-red-300">
-      <div className="blob w-64 h-64 rounded-full absolute bottom-0 right-0"></div>
+      <div className="blob w-64 h-64 rounded-full absolute bottom-0 right-0 hidden md:visible"></div>
       <div id="contact" className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <motion.div
           className="max-w-3xl mx-auto "

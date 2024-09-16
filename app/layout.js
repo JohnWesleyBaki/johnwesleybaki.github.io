@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "John Wesley😊",
-  description: "John Wesley's Portfolio Website",
+  description: "John Wesley Baki's Portfolio Website",
   openGraph: {
     title: "John Wesley",
     description: "John Wesley's Portfolio Website",

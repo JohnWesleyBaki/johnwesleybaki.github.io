@@ -23,13 +23,13 @@ const TabLayout = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`block w-40 text-left px-4 py-2 mb-2 rounded  ${
+            className={`block w-20   py-2 mb-2 rounded sm:w-40  ${
               activeTab === tab.id
                 ? "bg-cusgreen text-black"
                 : "bg-cusred text-white"
             }`}
           >
-            {tab.label}
+            <h3 className="text-xs sm:text-base text-center">{tab.label}</h3>
           </button>
         ))}
       </div>
@@ -44,14 +44,14 @@ const TabLayout = () => {
 
 export default function About() {
   return (
-    <div className="h-screen w-full  bg-black text-red-300 flex flex-col items-center justify-center relative">
-      <div className="blob w-64 h-64 rounded-full top-0 absolute right-0"></div>
-      <div className="text-center flex flex-col items-center p-4">
-        <h1 className="text-lg sm:text-2xl md:text-4xl  text-cusred font-bold mt-1  mb-1 md:mb-8 md:mt-4 ">
+    <div className="h-screen w-full m-1 bg-black text-red-300 flex flex-col items-center justify-center relative ">
+      <div className="blob w-64 h-64 rounded-full top-0 absolute right-0 hidden md:visible"></div>
+      <div className="text-center flex flex-col items-center p-4 relative">
+        <h1 className="text-lg sm:text-2xl md:text-4xl  text-cusred font-bold mt-4  mb-4 ">
           About Me
         </h1>
         <div className="flex justify-center w-full p-4">
-          <p className="text-sm sm:text-xs mt-2 md:text-base lg:text-lg  leading-relaxed max-w-full sm:max-w-2xl md:max-w-3xl">
+          <p className="text-xs sm:text-sm mt-2 md:text-base lg:text-lg  leading-relaxed max-w-full sm:max-w-2xl md:max-w-3xl">
             I&apos;m a software engineer specializing in frontend development,
             dedicated to building efficient, high-performance user interfaces
             with minimal memory leaks and optimized rendering. Eager to broaden

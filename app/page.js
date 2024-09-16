@@ -13,7 +13,7 @@ export default function Home() {
   const [columns, setColumns] = useState(0);
   const [rows, setRows] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [showLanding, setShowLanding] = useState(false);
+  
 
 
 
@@ -37,7 +37,7 @@ export default function Home() {
 
     const loadingTimer = setTimeout(() => {
       setLoading(false);
-      setTimeout(() => setShowLanding(true), 100);
+      
     }, 1000);
 
     return () => {
@@ -62,14 +62,11 @@ export default function Home() {
     <div>
       
       <AnimatePresence>
-        {loading && (
-          <LoadingScreen/>
-        
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {!loading && showLanding && (
+        {loading ? <LoadingScreen/> : 
+          
+    
+       
+       
          <>
          <motion.div
            id="tiles"
@@ -77,7 +74,7 @@ export default function Home() {
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}
-           transition={{ duration:1,}}
+           transition={{ duration:0.5 ,}}
            className="absolute top-0 left-0 w-full h-full grid grid-cols-[var(--columns)] grid-rows-[var(--rows)] z-0 "
          >
            {createTiles(columns * rows)}
@@ -129,13 +126,10 @@ export default function Home() {
         </div>
       </div>
     </motion.div>
-       </>
        
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {!loading && showLanding && (
+       
+        
+     
           <motion.div
             className="next-page relative z-10"
             initial={{ opacity: 0 }}
@@ -153,9 +147,50 @@ export default function Home() {
               <Contact />
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+          </>
+}</AnimatePresence>
     </div>
   );
 }
 
+
+// "use client"
+// import React, { useState, useEffect } from 'react';
+// import LoadingScreen from "./loading";
+// import Hero from "./Hero";
+// import { motion ,AnimatePresence} from 'framer-motion';
+
+// function Page() { 
+
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const loadingTimer = setTimeout(() => {
+//       setLoading(false);
+//     }, 1000);
+
+
+//     return () => clearTimeout(loadingTimer);
+//   }, []);
+
+//   return (
+
+//     <AnimatePresence>
+//     <>
+//       {loading ? (
+//         <motion.div
+//           key="loading" 
+//           initial={{ opacity: 1 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 0.5 }} 
+//         >
+//           <LoadingScreen />
+//         </motion.div>
+//       )  : <Hero />}
+//     </>
+//     </AnimatePresence>
+//   );
+// }
+
+// export default Page; 

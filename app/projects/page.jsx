@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 const ProjectCard = lazy(() => import("./ProjectCard"));
 
 const Skeleton = () => (
-  <div className="relative w-72 space-y-3 overflow-hidden rounded-md bg-red-800 p-3 shadow before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 hover:shadow-lg before:animate-[shimmer_1.5s_infinite]">
-    <div className="h-36 w-full rounded-lg bg-white-600"></div>
-    <div className="space-y-3">
-      <div className="h-5 w-8/12 rounded-full bg-neutral-600"></div>
-    </div>
+  <div className=" w-[20rem] h-[15rem] relative shadow-2xl bg-transparent rounded-lg flex flex-col p-4">
+    <div className="w-full h-3/4 bg-gray-400 rounded-lg mb-4 animate-pulse"></div>
+
+    <div className="w-3/4 h-4 bg-gray-500 rounded-full mb-2 animate-pulse"></div>
+    <div className="w-3/4 h-4 bg-gray-500 rounded-full animate-pulse"></div>
   </div>
 );
 
@@ -87,7 +87,7 @@ const ProjectsPage = () => {
 
 const Page = () => (
   <div className="h-screen w-full m-1 bg-black text-red-300 relative scrollable-cont">
-    <div className="blob w-64 h-64 rounded-full absolute"></div>
+    <div className="blob w-64 h-64 rounded-full absolute hidden md:visible"></div>
     <div className="text-center">
       <h1 className="text-lg sm:text-2xl md:text-4xl font-bold text-cusred mb-8 mt-8">
         My Projects
