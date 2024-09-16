@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function SideBar() {
   return (
     <div className="h-25 w-10 bottom-2 left-2 bg-transparent fixed z-50 text-white flex flex-col justify-between hidden sm:flex">
       <Link href="https://github.com/JohnWesleyBaki/" target="_blank">
-        <button>
+        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Image
             src="/svgs/github.svg"
             alt="GitHub"
@@ -14,14 +16,14 @@ function SideBar() {
             height={24}
             className="mb-2"
           />
-        </button>
+        </motion.button>
       </Link>
 
       <Link
         href="https://www.linkedin.com/in/john-wesley-baki/"
         target="_blank"
       >
-        <button>
+        <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Image
             src="/svgs/linkedin.svg"
             alt="LinkedIn"
@@ -29,7 +31,7 @@ function SideBar() {
             height={24}
             className="mb-2"
           />
-        </button>
+        </motion.button>
       </Link>
     </div>
   );
