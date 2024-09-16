@@ -51,12 +51,13 @@ export default function About() {
           About Me
         </h1>
         <div className="flex justify-center w-full p-4">
-          <p className="text-sm sm:text-xs mt-2 md:text-base lg:text-lg xl:text-xl leading-relaxed max-w-full sm:max-w-2xl md:max-w-3xl">
-            I express my ideas and views without any hesitation or bias. I want
-            to be in a place where my opinions are valued or at least
-            considered, criticized but not ignored. Technology is the one tool
-            that makes a huge impact on humanity instantly and I want to be part
-            of it.
+          <p className="text-sm sm:text-xs mt-2 md:text-base lg:text-lg  leading-relaxed max-w-full sm:max-w-2xl md:max-w-3xl">
+            I&apos;m a software engineer specializing in frontend development,
+            dedicated to building efficient, high-performance user interfaces
+            with minimal memory leaks and optimized rendering. Eager to broaden
+            my expertise, I&apos;m also interested in contributing to backend
+            systems and various stages of tech development to drive innovation
+            and deliver scalable solutions.
           </p>
         </div>
 

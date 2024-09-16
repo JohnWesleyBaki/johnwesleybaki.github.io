@@ -55,8 +55,8 @@ function Page() {
           </div>
 
           <p className="leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl mb-3">
-            If i convinced you to consider me then i think we can meet over a
-            zoom call and start discussing 🤞
+            If you&apos;re interested in collaborating, let’s set up a Zoom call
+            to discuss further. 🤞
           </p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <motion.div

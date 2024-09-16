@@ -25,25 +25,25 @@ function Experience() {
         <h2 className="text-base sm:text-lg  font-semibold mt-1">
           Software Engineer || April 2022 — August 2023
         </h2>
-        <ul className="ml-1 text-sm">
+        <ul className="ml-1 text-sm text-left">
           <li>
-            Developed and maintained HAL (Hardware Abstraction Layer) interfaces
-            for Android system components.
+            * Developed and maintained HAL (Hardware Abstraction Layer)
+            interfaces for Android system components.
           </li>
           <li>
-            Created and stabilized AIDL (Android Interface Definition Language)
-            interfaces for HALs.
+            * Created and stabilized AIDL (Android Interface Definition
+            Language) interfaces for HALs.
           </li>
           <li>
-            Integrated SCP and OpenSSH for secure file transfers between ECU and
-            USB flash drives.
+            * Integrated SCP and OpenSSH for secure file transfers between ECU
+            and USB flash drives.
           </li>
           <li>
-            Developed and optimized Android applications for automotive
+            * Developed and optimized Android applications for automotive
             interfaces using Java.
           </li>
           <li>
-            Designed a component with RTOS APIs to manage and track version
+            * Designed a component with RTOS APIs to manage and track version
             information for car components.
           </li>
         </ul>
